@@ -13,7 +13,8 @@ import mentorship from './mentorship'
 import publicationCategory from './publicationCategory'
 import education from './education'
 import experience from './experience'
-
+import eventCategory from './eventCategory'
+import events from './events'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -30,7 +31,8 @@ export default createSchema({
     education,
     experience,
     publicationCategory,
-
+    events,
+    eventCategory,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

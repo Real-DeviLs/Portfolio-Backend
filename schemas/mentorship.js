@@ -1,8 +1,15 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list';
+
+
 export default {
     name: 'mentorship',
     title: 'Mentorship',
     type: 'document',
     fields: [
+      orderRankField({ type: 'mentorship' }),
       {
         name: 'mentorshipStart',
         title: 'MentorshipStart',
@@ -39,6 +46,10 @@ export default {
         type: 'blockContent',
       },
     ],
-  
+    preview: {
+      select: {
+        title: 'menteeName',
+      }
+    }
   }
   

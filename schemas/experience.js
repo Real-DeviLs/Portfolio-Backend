@@ -1,8 +1,15 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list';
+
+
 export default {
     name: 'experience',
     title: 'Experience',
     type: 'document',
     fields: [
+      orderRankField({ type: 'experience' }),
       {
         name: 'dateStart',
         title: 'DateStart',
@@ -39,6 +46,11 @@ export default {
         type: 'blockContent',
       },
     ],
+    preview: {
+      select: {
+        title: 'institute',
+      }
+    }
   
   }
   

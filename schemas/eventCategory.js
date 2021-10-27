@@ -5,11 +5,11 @@ import {
 
   
 export default {
-    name:'publicationCategory',
-    title:'PublicationCategory',
+    name:'eventCategory',
+    title:'eventCategory',
     type:'document',
     fields:[
-        orderRankField({ type: 'publicationCategory' }),
+        orderRankField({ type: 'eventCategory' }),
         {
             
             name:'category',
