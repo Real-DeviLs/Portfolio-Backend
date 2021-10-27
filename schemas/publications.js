@@ -1,8 +1,15 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list';
+
 export default {
     name: 'publications',
     title: 'Publications',
     type: 'document',
+    
     fields: [
+      orderRankField({ type: 'publications' }),
       {
         name: 'publicationDate',
         title: 'PublicationDate',
@@ -40,6 +47,11 @@ export default {
         to:{type:"publicationCategory"},
       }
     ],
+    preview: {
+      select: {
+        title: 'title',
+      }
+    }
   
   }
   
